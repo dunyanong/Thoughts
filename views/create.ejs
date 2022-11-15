@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('partials/head.ejs') %>
+</head>
+<body>
+    <%- include('partials/nav.ejs') %>
+
+    <div class="create-blog content">
+        <form action="/blogs" method="POST">
+          <label for="title">To whom? <span class="towhom">(It can be Sony or everyone)</span></label>
+          <input type="text" id="title" name="title" required>
+          <label for="snippet">Nickname</label>
+          <input type="text" id="snippet" name="snippet" required>
+          <label for="body">Confessions</label>
+          <textarea id="body" name="body" required></textarea>
+          <button class="btn">Submit</button>
+        </form>
+      </div>
+
+      <%- include('partials/footer.ejs') %>
+</body>
+</html>
