@@ -1,5 +1,4 @@
 const express = require('express');
-const morgan = require('morgan');
 const mongoose = require('mongoose');
 const Blog = require('../models/blog');
 const { render } = require('ejs');
@@ -44,8 +43,6 @@ app.get('/api', (req, res) => {
     const { slug } = req.params;
     res.end(`Item: ${slug}`);
     });
-    
-    module.exports = app;
 
 // To create view engine:
 app.set('view engine', 'ejs');
@@ -105,18 +102,3 @@ app.use((req, res) => {
 });
 
 module.exports = app;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
